@@ -41,6 +41,12 @@ Arrow Keys: Move the player around the maze.
 # Game Running Mechanics Screen shots
 ![image](https://github.com/user-attachments/assets/d0156ddb-9b60-480d-a0d3-8a5c7c87b452)
 
+Upon further changes
+![image](https://github.com/user-attachments/assets/39456fc7-20ff-49ae-bf62-f69abfc755e5)
+![image](https://github.com/user-attachments/assets/b94fe76d-42be-4476-8afe-c1e92f4a46b4)
+
+
+
 
 
 
