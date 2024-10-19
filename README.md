@@ -41,10 +41,27 @@ Arrow Keys: Move the player around the maze.
 # Game Running Mechanics Screen shots
 ![image](https://github.com/user-attachments/assets/d0156ddb-9b60-480d-a0d3-8a5c7c87b452)
 
-Upon further changes
+# Upon further changes {For Level # 1}
 ![image](https://github.com/user-attachments/assets/39456fc7-20ff-49ae-bf62-f69abfc755e5)
 ![image](https://github.com/user-attachments/assets/b94fe76d-42be-4476-8afe-c1e92f4a46b4)
 
+Game Over
+![image](https://github.com/user-attachments/assets/8a0984f1-43c5-4a8b-a757-5f02051fefda)
+
+# Upon further changes {For Level # 2}
+![image](https://github.com/user-attachments/assets/62b92cb7-4024-4de8-b7d7-75d92bfa0fb8)
+
+Game Over
+![image](https://github.com/user-attachments/assets/b7da81d7-2143-4121-b4b0-210953a099ed)
+
+# Upon further changes {For Level # 3}
+
+
+
+Assumptions and Special Configurations
+Libraries: The game uses the ncurses library for terminal-based graphics and input handling. Ensure that it is correctly installed on your system.
+Terminal Configuration: The game requires a terminal with ncurses support. Make sure your terminal supports special key inputs like arrow keys.
+Initial Setup: The game initializes the terminal with special settings (noecho, cbreak, keypad) for a seamless gaming experience.
 
 
 
