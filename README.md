@@ -55,10 +55,11 @@ Game Over
 ![image](https://github.com/user-attachments/assets/b7da81d7-2143-4121-b4b0-210953a099ed)
 
 # Upon further changes {For Level # 3}
+![image](https://github.com/user-attachments/assets/550e366d-9e71-4195-bec3-e9ef4c554b8b)
+![image](https://github.com/user-attachments/assets/0a29e761-3583-4f71-8c8f-38899dc4574f)
 
 
-
-Assumptions and Special Configurations
+# Assumptions and Special Configurations
 Libraries: The game uses the ncurses library for terminal-based graphics and input handling. Ensure that it is correctly installed on your system.
 Terminal Configuration: The game requires a terminal with ncurses support. Make sure your terminal supports special key inputs like arrow keys.
 Initial Setup: The game initializes the terminal with special settings (noecho, cbreak, keypad) for a seamless gaming experience.
