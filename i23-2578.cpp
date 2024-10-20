@@ -38,6 +38,14 @@ struct Node
     }
 };
 
+struct Ps 
+{
+    Node* n;//pointer to store the position of the player
+    Ps()
+    {
+        n = nullptr;
+    }
+};
 
 
 int main()
