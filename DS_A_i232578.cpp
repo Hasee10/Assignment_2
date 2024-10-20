@@ -240,13 +240,28 @@ class Grid
         char n_4 = 'D';
         char n_5 = 'C';
         char n_6 = 'P';
-        if ((prev_mov == KEY_UP && dir == KEY_DOWN) ||
-            (prev_mov == KEY_DOWN && dir == KEY_UP) ||
-            (prev_mov == KEY_LEFT && dir == KEY_RIGHT) ||
-            (prev_mov == KEY_RIGHT && dir == KEY_LEFT)) {
-            mvprintw(1, 0, "Cannot move in the opposite direction immediately!");
+        if ((prev_mov == KEY_UP && dir == KEY_DOWN)) 
+        {
+            mvprintw(num, num_2, "Cant Move Back");
             return;
         }
+        else if(prev_mov == KEY_DOWN && dir == KEY_UP)
+        {
+            mvprintw(num, num_2, "Cant Move Back");
+            return;
+        }
+        else if(prev_mov == KEY_LEFT && dir == KEY_RIGHT)
+        {
+            mvprintw(num, num_2, "Cant Move Back");
+            return;
+        }
+        else if(prev_mov == KEY_RIGHT && dir == KEY_LEFT)
+        {
+            mvprintw(num, num_2, "Cant Move Back");
+            return;
+        }
+  
+
         if (rem_moves <= num_2) 
         {
             mvprintw(num, num_2, "GAME FINISH. No more moves left");
