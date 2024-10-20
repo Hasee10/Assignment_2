@@ -394,6 +394,23 @@ class Grid
         return t;
     }
 
+    void curr_scen() 
+    {
+        clear();//while displaying grid all previous grids are removed from the screen
+        int magn = 0;
+        if(ke_stat != true)
+        {
+            magn = node_dist(pl_mo, key);//if key is not picked up the distance from node to the key is calculated            
+        }
+
+        else
+        {                        
+            magn = node_dist(pl_mo, door);//if key is picked up the distance from node to door is calculated
+        }
+        int num = 0;
+        mvprintw(num, num, "Remaining MOVES --> %d || Undo MOVES Remaining -->  %d || result --> %d || DISTANCE TO --> %s: %d", rem_moves, ind_1, result, ke_stat ? "door" : "key", magn);
+    }
+
 };   
 
 int main()
