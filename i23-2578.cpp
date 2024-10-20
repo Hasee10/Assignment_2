@@ -50,7 +50,6 @@ struct Ps
 
 int main()
 {
-
     char u = 'u';
     char u_2 = 'q';
     int r;
@@ -76,6 +75,22 @@ int main()
     cout << endl;
     cin >> num;
     cout << endl;
+
+    if (num == 1)
+    {
+        r = 10;
+        c = 10;
+    }
+    else if (num == 2)
+    {
+        r = 15;
+        c = 15;
+    }
+    else if (num == 3)
+    {
+        r = 20;
+        c = 20;
+    }
 
     return 0;
 }
