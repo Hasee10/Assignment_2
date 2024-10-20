@@ -86,6 +86,7 @@ class Grid
         result = 0;
         prev_ind = 0;
         make_grid();
+        random_elements();
     }
 
 
