@@ -87,8 +87,43 @@ class Grid
         prev_ind = 0;
         make_grid();
         random_elements();
+        level(num);
     }
 
+    void level(int num) 
+    {
+        int magn = 0;
+        int s = 0;
+        int p = 0;
+
+        s = node_dist(pl_mo, key);
+        p = node_dist(key, door);
+        magn = s + p;
+        
+        if(num == 1) 
+        {
+            rem_moves = magn + 6;
+            ind_1 = 6;
+        }
+        
+        else if(num == 2) 
+        {
+            rem_moves = magn + 2;
+            ind_1 = 4;
+        }
+        
+        else if(num == 3) 
+        {
+            rem_moves = magn;
+            ind_1 = 1;
+        }
+        
+        else 
+        {
+            rem_moves = magn + 6;
+            ind_1 = 6;
+        }
+    }
 
     void make_grid() 
     {
