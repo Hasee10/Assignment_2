@@ -48,6 +48,11 @@ struct Ps
 };
 
 
+class Grid 
+{
+    
+};   
+
 int main()
 {
     char u = 'u';
@@ -97,6 +102,7 @@ int main()
     noecho();//text appearance hidden
     curs_set(0);//here the cursor is hidden
     keypad(stdscr, TRUE);//special keys like arrow keys are processed here
+
 
     return 0;
 }
