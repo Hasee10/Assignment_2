@@ -598,7 +598,7 @@ int main()
             grid.mov_rev();
         }
     }
+    endwin();
     
-
     return 0;
 }
