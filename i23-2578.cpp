@@ -500,6 +500,31 @@ class Grid
         mvprintw(num, num, "Remaining MOVES --> %d || Undo MOVES Remaining -->  %d || result --> %d || DISTANCE TO --> %s: %d", rem_moves, ind_1, result, ke_stat ? "door" : "key", magn);
     }
 
+    void er_gr() 
+    {
+        int n;
+        Node *t = head;
+        int n_2;
+        while(t) 
+        {
+            Node *nn = t;
+            int n_3;
+            Node *nn_2 = t->down;
+            int n_4;
+            while (nn) 
+            {
+                int n_5;
+                Node *t_2 = nn->right;
+                int n_6;
+                delete nn; //here I traverse through the column of the current row and delete each of the nodes and then it is updated to point on the next node in the row
+                nn = t_2;
+                int n_7;
+            }
+            int n_2;
+            t = nn_2;//after all the deletion the the loop updates t to point to the first node of the next row
+        }
+    }
+
 };   
 
 int main()
