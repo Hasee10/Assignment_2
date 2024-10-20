@@ -399,6 +399,33 @@ class Grid
         refresh();// updated grid is shown
     }
 
+    void mov_rev() 
+    {
+        char c = '.';
+        char c_2 = 'P';
+        int num = 0;
+        int num_2 = 2;
+        if (prev_ind > num) 
+        {
+            prev_ind = prev_ind - 1;//if undo moves are there the index is decremented by one moving the index to the last recorded move
+            Node *pr_node = mov_revs[prev_ind].n;//retrieves the node relating to the previous node
+
+            pl_mo->data = c;
+            pl_mo = pr_node;
+            pl_mo->data = c_2;
+
+            rem_moves++;
+            ind_1--;
+            curr_scen();//shows the pl_mos changed position
+            grid_making();//the pl_mos position is updated with the new coordinates
+        } 
+        
+        else 
+        {
+            mvprintw(num_2, num, "NONE UNDOS TO DO");
+        }
+    }
+
     Node* nod_gain(int a, int b) 
     {
         Node* t = head;
