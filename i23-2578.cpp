@@ -523,7 +523,12 @@ class Grid
             int n_2;
             t = nn_2;//after all the deletion the the loop updates t to point to the first node of the next row
         }
-    }
+    }    
+
+    ~Grid() 
+    {
+        er_gr();
+    } 
 
 };   
 
