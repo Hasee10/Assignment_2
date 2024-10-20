@@ -48,10 +48,9 @@ struct Ps
 };
 
 
-
-
 int main()
 {
+
     char u = 'u';
     char u_2 = 'q';
     int r;
