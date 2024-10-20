@@ -377,6 +377,23 @@ class Grid
         return nod;
     }
 
+    Node* nod_gain(int a, int b) 
+    {
+        Node* t = head;
+        int num = a;
+        int num_2 = b;
+        for (int i = 0; i < num; i++) 
+        {
+            t = t->down;
+        }
+        
+        for (int j = 0; j < num_2; j++) 
+        {
+            t = t->right;
+        }
+        return t;
+    }
+
 };   
 
 int main()
