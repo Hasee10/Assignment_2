@@ -50,9 +50,21 @@ struct Ps
 
 class Grid 
 {
-  private:
+   private:
+    Node *key;//key node
+    Node *door;//door node
     int rows;
     int cols;
+    int result;//player score
+    int rem_moves;//remnaining moves stored
+    int ind_1;//undo moves limit stored here
+    int prev_ind;//prev move index stored here
+
+    bool ke_stat;//check to see if i caught the key
+    Ps mov_revs[20];
+    Node *head;//head represents the top most node of the grid
+    Node *pl_mo;
+    Node *bb;
 };   
 
 int main()
