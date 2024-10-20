@@ -88,7 +88,7 @@ class Grid
         make_grid();
     }
 
-    
+
     void make_grid() 
     {
        int num = 0;  
@@ -149,6 +149,33 @@ class Grid
             head = curr_node;
          }
        }
+    }
+
+    void random_elements() 
+    {
+        srand(time(0));
+        char a = 'P';
+        char b = '.'; 
+        char c = 'B';
+        char d = 'C';
+        int num = 5;
+
+        door = rand_func();
+        door->data = b;
+
+        pl_mo = rand_func();
+        pl_mo->data = a;
+        key = rand_func();
+        key->data = b;
+    
+        bb = rand_func();
+        bb->data = c;
+
+        for (int i = 0; i < num; i++) 
+        {
+            Node *t = rand_func();
+            t->data = d;
+        }
     }
 
 
