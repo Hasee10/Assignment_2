@@ -213,7 +213,19 @@ class Grid
             t->data = d;
         }
     }
-
+    
+    int node_dist(Node *n1, Node *n2) 
+    {
+        int a;//xcoordinates
+        int b;
+        int c;//y coordinates
+        int d;
+        int sum = 0;
+        xy_cord(n1, a, c);
+        xy_cord(n2, b, d);
+        sum = abs(a - b) + abs(c - d);
+        return sum;
+    }
 
     Node* rand_func() 
     {
