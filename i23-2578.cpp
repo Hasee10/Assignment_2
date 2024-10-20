@@ -65,6 +65,17 @@ class Grid
     Node *head;//head represents the top most node of the grid
     Node *pl_mo;
     Node *bb;
+
+   public:
+    Grid()
+    {
+      rows = 0;
+      cols = 0;
+      head = nullptr;
+      ke_stat = false;
+      result = 0;
+      prev_ind = 0;
+    } 
 };   
 
 int main()
