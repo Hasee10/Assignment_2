@@ -426,6 +426,38 @@ class Grid
         }
     }
 
+     void xy_cord(Node *newN , int &var_1, int &var_2)//reference variables that store the x and y variables of the pont we need to find 
+    {
+        int n;
+        Node* nn_1 = head;//points at the top left corner of the grid
+        int n_2;
+        var_1 = 0;//row index as zero
+        while (nn_1 && nn_1 != newN) 
+        {
+            int n_3; 
+            Node *nn_2 = nn_1;
+            int n_4;
+            var_2 = 0;//column index as zero
+            while (nn_2 && nn_2 != newN) //traverses through the columns of the grid by using the right pointer
+            {
+                int n_7;
+                nn_2 = nn_2->right;
+                var_2++;
+                int n_8;
+            }//when node is found in this row the loop exits
+
+            if (nn_2 == newN)
+            {
+                int n_9;
+                break;//here i check if the temporary node points at the new node
+            }
+            int n_5;
+            nn_1 = nn_1->down;
+            int n_1;
+            var_1++;
+        }
+    }
+
     Node* nod_gain(int a, int b) 
     {
         Node* t = head;
