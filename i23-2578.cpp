@@ -85,9 +85,73 @@ class Grid
         ke_stat = false;
         result = 0;
         prev_ind = 0;
+        make_grid();
     }
+
     
-     
+    void make_grid() 
+    {
+       int num = 0;  
+       Node* pre_1 = nullptr;
+       Node* pre_2 = nullptr;
+       int n = rows;
+       int q = cols;
+       char b = '#';
+       char c = '.';
+       int p = n - 1;
+       int l = q - 1;
+
+       for (int i = 0; i < n; i++) 
+       {
+         Node* curr_node = nullptr;
+         int nut;
+         pre_2 = nullptr;
+         int nut_2;
+         for (int j = 0; j < q; j++) 
+         {
+            Node *NN;
+            if (i == num || j == num || i == p || j == l)
+            {
+               NN = new Node(b);
+            }
+            else
+            {
+               NN = new Node(c);
+            }
+                
+
+            if (j == num) 
+            {
+               curr_node = NN;
+            } 
+            else 
+            {
+               int t = 0;
+               pre_2->right = NN;
+               NN->left = pre_2;
+            }
+
+
+            if (i > num) 
+            {
+                int fp = 0;
+                NN->up = pre_1;
+                pre_1->down = NN;
+                pre_1 = pre_1->right;
+                int fp_2 = 0;
+            }
+            pre_2 = NN;
+         }
+         pre_1 = curr_node;
+            
+         if (i == num) 
+         {
+            head = curr_node;
+         }
+       }
+    }
+
+
 };   
 
 int main()
