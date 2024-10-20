@@ -227,6 +227,135 @@ class Grid
         return sum;
     }
 
+    void pl_move(int dir) 
+    {
+        int num = 1;
+        int num_2 = 0;
+        char n = '#';
+        char n_2 = '.';
+        char n_3 = 'K';
+        char n_4 = 'D';
+        char n_5 = 'C';
+        char n_6 = 'P';
+        if (rem_moves <= num_2) 
+        {
+            mvprintw(num, num_2, "GAME FINISH. No more moves left");
+            refresh();
+            getch();
+            endwin();
+            exit(0);
+        }
+        int dis = 0;
+        dis = node_dist(pl_mo, key);
+
+        Node* NN = pl_mo;
+        if(dir == KEY_UP)
+        {
+            NN = pl_mo->up;
+        }
+        else if(dir == KEY_DOWN)
+        {
+            NN = pl_mo->down;
+        }
+        else if(dir == KEY_LEFT)
+        {
+            NN = pl_mo->left;
+        }
+        else if(dir == KEY_RIGHT) 
+        {
+            NN = pl_mo->right;
+        }
+
+        if(NN && NN->data != n) 
+        {
+           if (NN == bb) 
+           {
+              k_d_show();
+              mvprintw(num, num_2, "BOMB BLAST. YOU LOST");
+              refresh();
+              getch();
+              endwin();
+              exit(0);
+          }
+
+          if (prev_ind < ind_1) 
+          {
+              int fp = 0;
+              mov_revs[prev_ind].n = pl_mo;
+              prev_ind = prev_ind + 1;
+          } 
+          
+          else 
+          {
+              int l = ind_1 - 1;
+              for (int i = 0; i < l; i++) 
+              {
+                 mov_revs[i] = mov_revs[i + 1];
+              }
+              mov_revs[l].n = pl_mo;
+          }
+
+          pl_mo->data = n_2;
+          pl_mo = NN;
+
+          if (pl_mo == key) 
+          {
+              pl_mo->data = n_3;
+              ke_stat = true;
+              mvprintw(num + 1, num_2, "KEY FOUND.");
+          }
+
+          if (pl_mo == door) 
+          {
+              pl_mo->data = n_4;
+              if (ke_stat) 
+              {
+                 result = result + rem_moves;
+                 mvprintw(num + 1, num_2, "GAME WON. DOOR UNLOCKED. Final SCORE -->  %d", result);
+                 refresh();
+                 getch();
+                 endwin();
+                 exit(0);
+              } 
+              else 
+              {
+                 int fp = num + 1;
+                 mvprintw(fp, num_2, "FIND KEY. DOOR LOCKED");
+              }
+           }
+
+           if (pl_mo->data == n_5) 
+           {
+              result = result + 2;
+              ind_1 = ind_1 + 1; 
+              mvprintw(num, num_2, "COIN COLLECTED. SCORE --> %d", result);
+           }
+           pl_mo->data = n_6;
+           rem_moves = rem_moves - 1;
+
+
+           int dis_2 = 0;
+           dis_2 = node_dist(pl_mo, key);
+           if(dis_2 < dis)
+           {
+              mvprintw(num + 2, num_2, "Drawing closer ");
+           }
+
+           else if(dis_2 > dis)
+           {
+              mvprintw(num + 2, num_2, "Moving away ");
+           }
+
+           curr_scen();
+           grid_making();
+        } 
+        
+        else 
+        {
+            mvprintw(num, num_2, "YOU SMACKEEED THE WAAALL!");
+        }
+    }
+
     Node* rand_func() 
     {
         char d = '.';
@@ -247,7 +376,6 @@ class Grid
         } while (nod->data != d);
         return nod;
     }
-
 
 };   
 
