@@ -179,6 +179,28 @@ class Grid
     }
 
 
+    Node* rand_func() 
+    {
+        char d = '.';
+        int a;
+        int b;
+        Node* nod = head;
+        int num = 0;
+        int num_2 = 0;
+        do 
+        {
+            a = rand() % (rows - 2);
+            num = a + 1;
+            
+            b = rand() % (cols - 2);
+            num_2 = b + 1;
+            
+            nod = nod_gain(num, num_2);
+        } while (nod->data != d);
+        return nod;
+    }
+
+
 };   
 
 int main()
