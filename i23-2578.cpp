@@ -50,7 +50,9 @@ struct Ps
 
 class Grid 
 {
-    
+  private:
+    int rows;
+    int cols;
 };   
 
 int main()
