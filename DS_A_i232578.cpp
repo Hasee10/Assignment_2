@@ -86,8 +86,8 @@ class Grid
         head = nullptr;
         ke_stat = false;
         result = 0;
-        prev_mov = -1
         prev_ind = 0;
+        prev_mov = -1;
         make_grid();
         random_elements();
         level(num);
@@ -342,7 +342,7 @@ class Grid
            }
            pl_mo->data = n_6;
            rem_moves = rem_moves - 1;
-
+           prev_mov = dir;
 
            int dis_2 = 0;
            dis_2 = node_dist(pl_mo, key);
