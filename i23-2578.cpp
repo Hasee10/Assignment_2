@@ -377,6 +377,28 @@ class Grid
         return nod;
     }
 
+    void grid_making() 
+    {
+        int num = rows;
+        Node *n_1 = head;// pointed to the head node that is the node on top left
+        for (int i = 0; i < num; i++) 
+        {
+            int num_2 = cols;
+            Node *t = n_1;
+            for (int j = 0; j < num_2; j++)// grid printed after the string line
+            {
+                int lm = i + 2;
+                int km = j * 2;
+                mvprintw(lm, km, "%c ", t->data);//specific row and column where the data will be printed
+                int num_9;
+                t = t->right;// pointer moved to next node in the row under consideration
+            }
+            int fp = 0;
+            n_1 = n_1->down;// now the node points to the next row node
+        }
+        refresh();// updated grid is shown
+    }
+
     Node* nod_gain(int a, int b) 
     {
         Node* t = head;
