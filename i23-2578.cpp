@@ -75,7 +75,19 @@ class Grid
       ke_stat = false;
       result = 0;
       prev_ind = 0;
-    } 
+    }
+
+    Grid(int r, int c, int num)
+    {
+        rows = r;
+        cols = c;
+        head = nullptr;
+        ke_stat = false;
+        result = 0;
+        prev_ind = 0;
+    }
+    
+     
 };   
 
 int main()
