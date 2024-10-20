@@ -586,5 +586,19 @@ int main()
     grid.curr_scen();
     grid.grid_making();
 
+    while ((m = getch()) != u_2) 
+    {
+        if (m != u) 
+        {
+            grid.pl_move(m);            
+        } 
+        
+        else 
+        {
+            grid.mov_rev();
+        }
+    }
+    
+
     return 0;
 }
