@@ -92,5 +92,11 @@ int main()
         c = 20;
     }
 
+    initscr();//terminal setup for the game interface
+    cbreak();//direct output no enter required
+    noecho();//text appearance hidden
+    curs_set(0);//here the cursor is hidden
+    keypad(stdscr, TRUE);//special keys like arrow keys are processed here
+
     return 0;
 }
