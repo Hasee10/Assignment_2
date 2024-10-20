@@ -48,8 +48,35 @@ struct Ps
 };
 
 
+
+
 int main()
 {
+    char u = 'u';
+    char u_2 = 'q';
+    int r;
+    int c;
+    int num = 0;
+    int m;
+    cout << "   _____ _            _   _                                          " << endl;
+    cout << "  |_   _| |__   ___  | | | |_ __  ___  ___  ___ _ __                 " << endl;
+    cout << "    | | | '_ \\ / _ \\ | | | | '_ \\/ __|/ _ \\/ _ \\ '_ \\              " << endl;
+    cout << "    | | | | | |  __/ | |_| | | | \\__ \\  __/  __/ | | |              " << endl;
+    cout << "    |_| |_| |_|\\___|  \\___/|_| |_|___/\\___|\\___|_| |_|          _   " << endl;
+    cout << "    | | ___  _   _ _ __ _ __   ___ _   _   / _ \\ _   _  ___  ___| |_ " << endl;
+    cout << " _  | |/ _ \\| | | | '__| '_ \\ / _ \\ | | | | | | | | | |/ _ \\/ __| __|" << endl;
+    cout << "| |_| | (_) | |_| | |  | | | |  __/ |_| | | |_| | |_| |  __/\\__ \\ |_ " << endl;
+    cout << " \\___/ \\___/ \\__,_|_|  |_| |_|\\___|\\__, |  \\__\\_\\\\__,_|\\___||___/\\__|" << endl;
+    cout << "                                   |___/                             " << endl;
+    
+    cout << "Now you are Tasked with Selecting the LEVEL of the GAME" << endl;
+    cout << "CHOOSE from the following " << endl;
+    cout << " ---> 1. EASY-LEVEL " << endl;
+    cout << " ---> 2. MEDIUM-LEVEL " << endl;
+    cout << " ---> 3. HARD-LEVEL " << endl;
+    cout << endl;
+    cin >> num;
+    cout << endl;
 
     return 0;
 }
