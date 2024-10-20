@@ -581,7 +581,10 @@ int main()
     noecho();//text appearance hidden
     curs_set(0);//here the cursor is hidden
     keypad(stdscr, TRUE);//special keys like arrow keys are processed here
-
+    
+    Grid grid(r, c, num);
+    grid.curr_scen();
+    grid.grid_making();
 
     return 0;
 }
