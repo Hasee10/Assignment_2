@@ -59,6 +59,7 @@ class Grid
     int rem_moves;//remnaining moves stored
     int ind_1;//undo moves limit stored here
     int prev_ind;//prev move index stored here
+    int prev_mov;
 
     bool ke_stat;//check to see if i caught the key
     Ps mov_revs[20];
@@ -75,6 +76,7 @@ class Grid
       ke_stat = false;
       result = 0;
       prev_ind = 0;
+      prev_mov = 0;
     }
 
     Grid(int r, int c, int num)
@@ -84,6 +86,7 @@ class Grid
         head = nullptr;
         ke_stat = false;
         result = 0;
+        prev_mov = -1
         prev_ind = 0;
         make_grid();
         random_elements();
@@ -237,10 +240,10 @@ class Grid
         char n_4 = 'D';
         char n_5 = 'C';
         char n_6 = 'P';
-        if ((prev_ind == KEY_UP && dir == KEY_DOWN) ||
-            (prev_ind == KEY_DOWN && dir == KEY_UP) ||
-            (prev_ind == KEY_LEFT && dir == KEY_RIGHT) ||
-            (prev_ind == KEY_RIGHT && dir == KEY_LEFT)) {
+        if ((prev_mov == KEY_UP && dir == KEY_DOWN) ||
+            (prev_mov == KEY_DOWN && dir == KEY_UP) ||
+            (prev_mov == KEY_LEFT && dir == KEY_RIGHT) ||
+            (prev_mov == KEY_RIGHT && dir == KEY_LEFT)) {
             mvprintw(1, 0, "Cannot move in the opposite direction immediately!");
             return;
         }
