@@ -475,6 +475,14 @@ class Grid
         return t;
     }
 
+    void k_d_show() 
+    {
+        int fp = 0;
+        key->data = 'K';//if the pl_mo node matches the key and the door then the position is updated here
+        int fp_2 = 0;
+        door->data = 'D';
+    }
+
     void curr_scen() 
     {
         clear();//while displaying grid all previous grids are removed from the screen
